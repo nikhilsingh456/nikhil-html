@@ -1,0 +1,119 @@
+import math  
+def fact(n):  
+    return(math.factorial(n))  
+  
+def add(x, y):
+    return x + y
+
+# This function subtracts two numbers
+def subtract(x, y):
+    return x - y
+
+# This function multiplies two numbers
+def multiply(x, y):
+    return x * y
+
+# This function divides two numbers
+def divide(x, y):
+    return x / y
+    
+def square (num):
+	return  (num*num)
+
+# User defind method to find cube
+def cube (num) :
+	return  (num*num*num) 
+	
+def cube_root(x):
+        return x**(1/3)
+
+print(" \t                ðŸ‘‰ ns@360Â° ðŸ‘ˆ   \n" )
+
+
+print("               \n   \t           *  Select operation.  *\n")
+print("   1.Add  ||  2.Subtract  ||   3.Multiply  ||    4.Divide\n")
+print("   5.Factorial ||  6.Square  ||  7.Cube  ||  8.Cube root \n")
+print("9.Square root || 10.Power || 11.Prime number || 12.Even& Odd")
+print("")
+print("")
+print("")
+
+while True:
+    # take input from the user
+    choice = input("               \t Enter choice: ")
+
+    # check if choice is one of the four options
+    
+    		
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("\n \tEnter first number: "))
+        num2 = float(input("\tEnter second number: "))
+        
+        if choice == '1':
+        	print(num1,'+', num2, '=',add(num1, num2))
+        	print("")
+        elif choice == '2':
+        	print(num1, "-", num2, "=", subtract(num1, num2))
+        	print("")
+        elif choice == '3':
+        	print(num1, "*", num2, "=", multiply(num1, num2))
+        	print("")
+        elif choice == '4':
+        	print(num1, "/", num2, "=", divide(num1, num2))
+        	print("")
+        	
+    elif choice in ('5'):
+        num = int(input("\n \tEnter the number: "))
+        f = fact(num)  
+        print("\tFactorial of", num, "is ", f, "\n")
+        
+    elif choice in ('6'):
+    	number = float (input("\n \tEnter number: "))
+    	print ("\tsquare of {0} is {1} \n".format(number, square(number)))
+    	
+    elif choice in ('7'):
+    	number = float (input("\n \tEnter  number: "))
+    	print ("\tCube of {0} is {1} \n".format(number, cube (number)))
+    	
+    elif choice in ('8'):
+    	num=float(input("\n \tenter number: "))
+    	f=cube_root(num)
+    	print("\tcube root of", num, "is", f, "\n")
+    
+    elif choice in ('9'):
+    	num=float(input("\n \tenter number: "))
+    	
+    	print("\t",(math.sqrt(num)), "\n")
+    
+    elif choice in ('10'):
+    	num=float(input("\n \tenter number: "))
+    	pow=float(input("\tenter power: "))
+    	print("\n \t",math.pow(num,pow), "\n")
+    	
+    elif choice in ('11'):
+    	num = int(input("\n \tEnter a number: "))
+    	flag = False
+    	if num > 1:
+    	   for i in range(2, num):
+    	      if (num % i) == 0:
+    	       flag = True
+    	       break
+    	   if flag:
+    	   	print("\t",num, "is not a prime number \n")
+    	   else:
+    	   	print("\t",num, "is a prime number \n")
+    
+    elif choice in ('12'):
+    	num = int(input("\n \tEnter a number: ")) 
+    	if (num % 2) == 0:
+    		print("\t{0} is Even number".format(num),"\n")  
+    	else:
+    		print("\t{0} is Odd number".format(num),"\n")
+    
+    
+       # next_calculation = input("Let's do next calculation? (yes/no): ")
+       # if next_calculation == "no":
+        	#break
+    
+    else:
+        print("Invalid Input")
